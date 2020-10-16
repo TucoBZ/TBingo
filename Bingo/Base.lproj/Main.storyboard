@@ -33,6 +33,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6e-lR-jfg">
                                         <rect key="frame" x="0.0" y="704" width="414" height="65"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="drawButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="t8O-EA-BIs"/>
                                         </constraints>

@@ -1,5 +1,5 @@
 //
-//  BingoUITests.swift
+//  RobotSampleUITest.swift
 //  BingoUITests
 //
 //  Created by Tulio Bazan on 16/10/20.
@@ -7,8 +7,14 @@
 //
 
 import XCTest
+import UIBot
 
-class BingoUITests: XCTestCase {
+class RobotSampleUITest: XCTestCase, Bottable {
+
+    var app: XCUIApplication = XCUIApplication()
+    var caseTest: XCTestCase {
+        return self
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -17,7 +23,7 @@ class BingoUITests: XCTestCase {
         continueAfterFailure = false
 
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        app.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -27,17 +33,14 @@ class BingoUITests: XCTestCase {
     }
 
     func testExample() throws {
+        let drawRobot = DrawViewControllerRobot(test: self)
+        drawRobot
+            .assert(label: "Sortei um Número")
+            .drawNumber()
+            .openDrawedControl()
 
-        let app = XCUIApplication()
-
-        app/*@START_MENU_TOKEN@*/.buttons["drawButton"]/*[[".buttons[\"Sortear\"]",".buttons[\"drawButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-
-        app.buttons["Sorteados"].tap()
-
-        let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.firstMatch.swipeUp()
-        collectionViewsQuery.staticTexts["142"].tap()
-
+        DrawedViewControllerRobot(test: self)
+            .scrollUntilFind(number: drawRobot.lastDrawedNumber)
     }
 
 }

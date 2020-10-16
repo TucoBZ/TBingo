@@ -47,8 +47,16 @@ class BingoSampleUITests: XCTestCase {
     func scrollUntilFind(staticText: String) {
         let app = XCUIApplication()
 
+
         while !app.staticTexts[staticText].exists {
+
+            let lastText: String = app.staticTexts.allElementsBoundByIndex.last!.label
+
             app.collectionViews.firstMatch.swipeUp()
+
+            if lastText == app.staticTexts.allElementsBoundByIndex.last!.label {
+                break
+            }
         }
     }
 
