@@ -16,7 +16,11 @@ class DrawViewController: UIViewController {
         case sorted
     }
     
-    @IBOutlet weak var drawedNumberLabel: UILabel!
+    @IBOutlet weak var drawedNumberLabel: UILabel! {
+        didSet {
+            drawedNumberLabel.accessibilityIdentifier = "drawedNumberLabel"
+        }
+    }
     @IBOutlet weak var logoImage: UIImageView! {
         didSet {
             logoImage.image = UIImage(named: "logo", in: TBingoManager.shared.bundle, compatibleWith: nil)

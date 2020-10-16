@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59211E0123F0AE2D00D9FA60 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59211E0023F0AE2D00D9FA60 /* Media.xcassets */; };
+		5987D28E253A1E4100BC0BB0 /* BingoSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987D28D253A1E4100BC0BB0 /* BingoSampleUITests.swift */; };
 		599646E022ED2A2D00C1F74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599646DF22ED2A2D00C1F74D /* AppDelegate.swift */; };
 		599646E222ED2A2D00C1F74D /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599646E122ED2A2D00C1F74D /* DrawViewController.swift */; };
 		599646E522ED2A2D00C1F74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 599646E322ED2A2D00C1F74D /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		59211E0023F0AE2D00D9FA60 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		5987D28D253A1E4100BC0BB0 /* BingoSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoSampleUITests.swift; sourceTree = "<group>"; };
 		599646DC22ED2A2D00C1F74D /* Bingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		599646DF22ED2A2D00C1F74D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		599646E122ED2A2D00C1F74D /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		5987D28B253A1B5000BC0BB0 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				5987D28D253A1E4100BC0BB0 /* BingoSampleUITests.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5996470022ED2A2E00C1F74D /* BingoUITests.swift in Sources */,
+				5987D28E253A1E4100BC0BB0 /* BingoSampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
